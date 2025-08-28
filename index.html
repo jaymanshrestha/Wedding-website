@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Wedding</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Jayman & Aleeza — Our Wedding Day</h1>
+  </header>
+
+  <section>
+    <h2>Welcome to Our Love Story</h2>
+    <p>
+      [Insert your welcome message here. Something heartfelt, like how you met, what this day means to you, or a note to guests.]
+    </p>
+  </section>
+
+  <section>
+    <h2>Event Details</h2>
+    <p>
+      📍 Venue: [Location] <br>
+      📅 Date: [Wedding Date] <br>
+      🕒 Time: [Start Time] <br>
+      💌 Dress Code: [Optional]
+    </p>
+  </section>
+
+  <section>
+    <h2>Countdown to the Big Day</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>
+
+  <footer>
+    Made with ❤️ by Jayman | See you on our special day!
+  </footer>
+
+  <script>
+    // Countdown Timer
+    const countdown = document.getElementById("countdown");
+    const weddingDate = new Date("2025-12-20T15:00:00").getTime(); // Change this!
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "It's Wedding Time!";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
