@@ -13,17 +13,17 @@ body {
 
 header {
   height: 100vh;
-  background: url('https://images.unsplash.com/photo-1526045612212-70caf35c14df') center/cover no-repeat;
+  background: url("images/11.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  animation: fadeIn 2s ease-in;
+  animation: fadeIn 3s ease-in;
 }
 
 header h1 {
   font-size: 3.5rem;
-  color: white;
+  color: rgb(10, 100, 31);
   text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
